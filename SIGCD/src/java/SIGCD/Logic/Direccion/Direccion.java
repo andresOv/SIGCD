@@ -2,32 +2,32 @@ package SIGCD.Logic.Direccion;
 
 public class Direccion {
 
-    private String distrito;
-    private String barrio;
+    private int distrito;
+    private int barrio;
     private String direccionExacta;
 
     public Direccion() {
     }
 
-    public Direccion(String distrito, String barrio, String direccionExacta) {
+    public Direccion(int distrito, int barrio, String direccionExacta) {
         this.distrito = distrito;
         this.barrio = barrio;
         this.direccionExacta = direccionExacta;
     }
 
-    public String getDistrito() {
+    public int getDistrito() {
         return distrito;
     }
 
-    public void setDistrito(String distrito) {
+    public void setDistrito(int distrito) {
         this.distrito = distrito;
     }
 
-    public String getBarrio() {
+    public int getBarrio() {
         return barrio;
     }
 
-    public void setBarrio(String barrio) {
+    public void setBarrio(int barrio) {
         this.barrio = barrio;
     }
 

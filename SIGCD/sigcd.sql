@@ -183,7 +183,3 @@ insert into GradoAcademico  values(12, "Duodécimo año");
 -- -----------------------------------------------------
 -- Pruebas
 -- -----------------------------------------------------
-
-insert into Persona values(1, "402260762", "Sebastian", "Cabezas", "Madrigal");
-insert into Persona values(2, "666666666", "Andres", "Oviedo", "Herrera");
-

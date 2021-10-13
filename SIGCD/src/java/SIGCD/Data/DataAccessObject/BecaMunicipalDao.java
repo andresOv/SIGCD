@@ -38,10 +38,10 @@ public class BecaMunicipalDAO {
     }
 
     public boolean create(BecaMunicipal becaMunicipal) throws SQLException {
-        String ayudaTemporalSQL = "insert into BecaMunicipal (estado,solicitante,estudiante,segundoEncargado,fechaCreacion) values(?,?,?,?,?)";
+        String becaMunicipalSQL = "insert into BecaMunicipal (estado,solicitante,estudiante,segundoEncargado,fechaCreacion) values(?,?,?,?,?)";
         Database database = Database.instance();
         PreparedStatement preparedStatement = null;
-        preparedStatement = database.getConnection().prepareStatement(ayudaTemporalSQL);
+        preparedStatement = database.getConnection().prepareStatement(becaMunicipalSQL);
         preparedStatement.setInt(1, becaMunicipal.getEstado());
         preparedStatement.setInt(2, becaMunicipal.getSolicitante());
         preparedStatement.setInt(3, becaMunicipal.getEstudiante());

@@ -1,18 +1,13 @@
 
 import SIGCD.Data.DataAccessObject.Model;
+import SIGCD.Logic.Direccion.Direccion;
 import SIGCD.Logic.Formulario.AyudaTemporal;
 import SIGCD.Logic.Formulario.BecaMunicipal;
+import SIGCD.Logic.Persona.Estudiante;
+import SIGCD.Logic.Persona.Persona;
+import SIGCD.Logic.Persona.Solicitante;
 import java.sql.Timestamp;
 
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-/**
- *
- * @author sebas
- */
 public class MainPruebas {
 
     /**
@@ -20,6 +15,21 @@ public class MainPruebas {
      * @throws java.lang.Exception
      */
     public static void main(String args[]) throws Exception {
+        Model model = Model.instance();
+        Timestamp timestamp = new Timestamp(System.currentTimeMillis());
+        Persona persona = new Persona("1111", "Sebas", "Cabe", "Madri");
+        Persona persona1 = new Persona("0000", "Sebas", "Cabe", "Madri");
+        Direccion direccion = new Direccion(1, 1, "San Pablo");
+        Solicitante solicitante = new Solicitante(1, "0000", "1111", direccion);
+        Estudiante estudiante = new Estudiante(2, 1, 10, "2021");
+        AyudaTemporal ayudaTemporal = new AyudaTemporal(1, 1, "Emergencia", timestamp);
+        BecaMunicipal becaMunicipal = new BecaMunicipal(2, 1, 1, 2, timestamp);
 
+        model.createPersona(persona);
+        model.createPersona(persona1);
+        model.createSolicitante(solicitante);
+        model.createEstudiante(estudiante);
+        model.createAyudaTemporal(ayudaTemporal);
+        model.createBecaMunicipal(becaMunicipal);
     }
 }

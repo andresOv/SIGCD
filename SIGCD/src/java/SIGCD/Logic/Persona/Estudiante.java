@@ -6,30 +6,23 @@ public class Estudiante extends Persona {
     private int gradoAcademico;
     private int edad;
     private String fechaNacimiento;
-    private Solicitante solicitante;
-    private Persona encargado;
 
     public Estudiante() {
     }
 
-    public Estudiante(int idPersona, String cedula, String nombre, String primerApellido, String segundoApellido, int idEstudiante, int gradoAcademico, int edad, String fechaNacimiento, Solicitante solicitante, Persona encargado) {
-        super(idPersona, cedula, nombre, primerApellido, segundoApellido);
+    public Estudiante(int idEstudiante, int idPersona, int gradoAcademico, int edad, String fechaNacimiento) {
+        super(idPersona);
         this.idEstudiante = idEstudiante;
         this.gradoAcademico = gradoAcademico;
         this.edad = edad;
         this.fechaNacimiento = fechaNacimiento;
-        this.solicitante = solicitante;
-        this.encargado = encargado;
     }
 
-    public Estudiante(String cedula, String nombre, String primerApellido, String segundoApellido, int idEstudiante, int gradoAcademico, int edad, String fechaNacimiento, Solicitante solicitante, Persona encargado) {
-        super(cedula, nombre, primerApellido, segundoApellido);
-        this.idEstudiante = idEstudiante;
+    public Estudiante(int idPersona, int gradoAcademico, int edad, String fechaNacimiento) {
+        super(idPersona);
         this.gradoAcademico = gradoAcademico;
         this.edad = edad;
         this.fechaNacimiento = fechaNacimiento;
-        this.solicitante = solicitante;
-        this.encargado = encargado;
     }
 
     public int getGradoAcademico() {
@@ -56,22 +49,6 @@ public class Estudiante extends Persona {
         this.fechaNacimiento = fechaNacimiento;
     }
 
-    public Solicitante getSolicitante() {
-        return solicitante;
-    }
-
-    public void setSolicitante(Solicitante solicitante) {
-        this.solicitante = solicitante;
-    }
-
-    public Persona getEncargado() {
-        return encargado;
-    }
-
-    public void setEncargado(Persona encargado) {
-        this.encargado = encargado;
-    }
-
     public int getIdPersona() {
         return idPersona;
     }
@@ -90,6 +67,7 @@ public class Estudiante extends Persona {
 
     @Override
     public String toString() {
-        return "Estudiante{" + "idEstudiante=" + idEstudiante + ", gradoAcademico=" + gradoAcademico + ", edad=" + edad + ", fechaNacimiento=" + fechaNacimiento + ", solicitante=" + solicitante + ", encargado=" + encargado + '}';
+        return "Estudiante{" + "idEstudiante=" + idEstudiante + ", gradoAcademico=" + gradoAcademico + ", edad=" + edad + ", fechaNacimiento=" + fechaNacimiento + '}';
     }
+
 }
